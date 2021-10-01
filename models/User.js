@@ -12,6 +12,7 @@ const UserSchema = new Schema(
             type: String,
             unique: true,
             required: "E-mail is required",
+            validate: [/.+@.+\..+/, 'Please enter a valid e-mail address']
         },
         // array of _id values that reference the Thought model
         thoughts: [
